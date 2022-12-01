@@ -11,7 +11,7 @@ plate_not_found_counter = 0
 
 print(f"\nTesting on average pictures from the {folder_path} folder.\n\n")
 for filename, expected_text in image_dict.items():
-    plate_text = detect_license_plate(f"{folder_path}/{filename}")
+    plate_text = detect_license_plate(f"{folder_path}/{filename}.jpg")
     if plate_text is None or plate_text == "No plate detected":
         print(f"Filename: {filename}\tLicense plate not found or can't read.")
         plate_not_found_counter += 1
